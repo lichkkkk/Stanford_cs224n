@@ -39,7 +39,7 @@ log(sigmoid(x))' = 1/sigmoid(x) * sigmoid(x)' = sigmoid(-x)
 
 d(Loss)/da  = sum(-xi * yi * sigmoid(-axi) + xi * (1 - yi) * sigmoid(axi))
             = sum(-xi * yi * (1 - sigmoid(axi)) + xi * (1 - yi) * sigmoid(axi))
-            = xi * (sigmoid(axi) - yi)
+            = sum(xi * (sigmoid(axi) - yi))
 ```
 Till here, we can use Gradient Descent to compute the parameter *a*:
 ```
