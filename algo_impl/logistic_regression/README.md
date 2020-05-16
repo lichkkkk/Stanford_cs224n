@@ -44,7 +44,7 @@ d(Loss)/da  = sum(-xi * yi * sigmoid(-axi) + xi * (1 - yi) * sigmoid(axi))
 Till here, we can use Gradient Descent to compute the parameter *a*:
 ```
 while criteria > threshold:
-  delta_a = -d(Loss)/da * step
+  delta_a = -d(Loss)/da * step / #X
   a += delta_a
 ```
 So far we have went through the whole process of Logistic Regression for binary classification. To adapt it to multi-class classification, we can use [softmax function](https://en.wikipedia.org/wiki/Softmax_function) to represent P:
